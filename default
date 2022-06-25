@@ -1,0 +1,106 @@
+module.exports = {
+  config: {
+    // Standardschriftgröße in Pixel für alle Registerkarten
+    fontSize: 12,
+
+    // Schriftfamilie mit optionalen Fallbacks
+    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+
+    // Hintergrundfarbe und Deckkraft des Terminal-Cursors (hex, rgb, hsl, hsv, hwb oder cmyk)
+    cursorColor: 'rgba(248,28,229,0.8)',
+
+    // BEAM" für |, "UNDERLINE" für _, "BLOCK" für █
+    cursorShape: 'BLOCK',
+
+    // Farbe des Textes
+    foregroundColor: '#fff',
+
+    // Terminal-Hintergrundfarbe
+    backgroundColor: '#000',
+
+    // Rahmenfarbe (Fenster, Registerkarten)
+    borderColor: '#333',
+
+    // benutzerdefiniertes CSS zum Einbetten in das Hauptfenster
+    css: '',
+
+    // benutzerdefiniertes CSS zum Einbetten in das Terminalfenster
+    termCSS: '',
+
+    // auf `true` (ohne Anführungszeichen) setzen, wenn du ein Linux-Setup verwendest, das keine nativen Menüs anzeigt
+    // Standard: `false` unter Linux, `true` unter Windows (ignoriert unter macOS)
+    showHamburgerMenu: '',
+
+    // Setze auf "False", wenn du die Schaltflächen zum Minimieren, Maximieren und Schließen ausblenden willst.
+    // Setze sie zusätzlich auf "links", wenn du sie auf der linken Seite haben willst, wie in Ubuntu
+    // Standard: `true` unter Windows und Linux (ignoriert unter macOS)
+    showWindowControls: '',
+
+    // benutzerdefiniertes Padding (CSS-Format, d.h.: "Oben rechts unten links")
+    padding: '12px 14px',
+
+    // die vollständige Liste. Wenn du die gesamte Farbpalette zur Verfügung stellen willst,
+    // einschließlich der 6 x 6 Farbwürfel und der Graustufenkarte, gibst du einfach
+    // ein Array anstelle eines Farbkartenobjekts ein
+    colors: {
+      black: '#000000',
+      red: '#ff0000',
+      green: '#33ff00',
+      yellow: '#ffff00',
+      blue: '#0066ff',
+      magenta: '#cc00ff',
+      cyan: '#00ffff',
+      white: '#d0d0d0',
+      lightBlack: '#808080',
+      lightRed: '#ff0000',
+      lightGreen: '#33ff00',
+      lightYellow: '#ffff00',
+      lightBlue: '#0066ff',
+      lightMagenta: '#cc00ff',
+      lightCyan: '#00ffff',
+      lightWhite: '#ffffff'
+    },
+
+    // die Shell, die beim Starten einer neuen Sitzung ausgeführt werden soll (z.B. /usr/local/bin/fish)
+    // wenn du nichts angibst, wird standardmäßig die Anmeldeshell deines Systems verwendet
+    // Achte darauf, dass du einen vollständigen Pfad verwendest, wenn der Binärname nicht funktioniert
+    // (z.B. `C:\\Windows\\System32\\bash.exe` anstelle von `bash.exe`)
+    // Wenn du die Powershell verwendest, musst du das `--login` unten entfernen
+    shell: 'C:\\Program Files\\Git\\git-cmd.exe',
+
+    // für das Setzen von Shell-Argumenten (d.h. für die Verwendung der interaktiven shellArgs: ['-i'])
+    // standardmäßig wird ['--login'] verwendet
+    shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],
+
+    // für Umgebungsvariablen
+    env: { TERM: 'cygwin'},
+
+    // für keine Glocke auf false setzen
+    bell: 'SOUND',
+
+    // bei true wird der ausgewählte Text automatisch in die Zwischenablage kopiert
+    copyOnSelect: false
+
+    // wenn wahr, wird beim Rechtsklick der ausgewählte Text kopiert oder eingefügt, wenn keine
+    // Auswahl vorhanden ist (unter Windows standardmäßig true)
+    // quickEdit: true
+
+    // URL zur benutzerdefinierten Glocke
+    // bellSoundURL: 'http://example.com/bell.mp3',
+
+    // für erweiterte Konfigurationsflags siehe https://hyper.is/#cfg
+  },
+
+  // eine Liste von Plugins, die von npm geholt und installiert werden sollen
+  // Format: [@org/]projekt[#version]
+  // Beispiele:
+  //   `hyperpower`
+  //   `@company/project`
+  //   `project#1.0.1`
+  plugins: [],
+
+  // in der Entwicklungsansicht, kannst du ein Verzeichnis unter
+  // `~/.hyper_plugins/local/` anlegen und es hier einbinden
+  // um es zu laden und zu vermeiden, dass es mit `npm installiert` wird
+  localPlugins: []
+};
